@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>try-catch, throw</title>
+</head>
+<body>
+  <script>
+    let value;
+    // 에러가 발행할 가능성이 있으면 try catch 사용함
+    // 에러가 발생해도 프로그램이 죽지 않게 하기 위해 사용 예를들면 서버에서 통신하고 가져올때 사용
+    try{
+      value = ball;
+      // error는 식별자로 임의의 이름 사용가능
+    } catch(error){
+      console.log('carch 실행');
+    } finally {
+      // 에러가 나도 안나도 실행함
+      console.log("finally 실행");
+    }
+
+    // throw 예외를 발생시킴
+    try {
+      // throw 세미콜론 다음에 let 메시지는 실행시키지 않음 throw이후 catch문으로 넘어감
+      throw "예외 발생시킴";
+      // let sports ="스포츠";
+    } catch(error){
+      // error 파라미터가 throw를 받아옴
+      console.log(error);
+      // console.log(sports);
+    }
+
+    try {
+      throw{
+        msg:"예외 발생시킴",
+        bigo: "임의의 이름 사용"
+      };
+    } catch(error){
+      console.log(error.msg);
+      console.log(error.bigo);
+    };
+
+    // Error 오브젝트 사용
+    try {
+      throw new Error("예외 발생시킴");
+    } catch(error){
+      console.log(error.message);
+    }
+  </script>
+</body>
+</html>
