@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>beack, continue</title>
+</head>
+<body>
+  <script>
+    // continue는 for, for~in, While, do~while에서 사용가능
+    for(let k=0; k<5; k++){
+      if(k===2 || k===3){
+        // 여기에서 컨티뉴 하게되면 for문의 k++로 바로 가게됨
+        continue;
+      };
+      console.log(k);
+    }
+
+    // 실행결과 0 1 4
+  </script>
+</body>
+</html>
