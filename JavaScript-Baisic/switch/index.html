@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>switch</title>
+</head>
+<body>
+  <script>
+    let exp =1;
+    switch(exp){
+      case 1:
+        console.log(100);
+        // break 문을 넣어 줘야 case 2까지 찍히지 않고 끝나게 됨
+        break;
+      case 2:
+        console.log(200);
+    }
+
+    let exp2 = 7, value;
+    switch(exp){
+      case 1:
+        value = 100;
+      default:
+        value = 700;
+        //아래 케이스가 할당되지 않게 하려면 break; 필요
+        break;
+      case 2:
+        value =200;
+    }
+    console.log(value);
+  </script>
+</body>
+</html>
