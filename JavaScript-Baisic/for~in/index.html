@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for~in문</title>
+</head>
+<body>
+  <script>
+    let sports = {
+      soccer: "축구",
+      baseball: "야구"
+    };
+    
+    // 오브젝트의 프로퍼티 열거
+    for (var key in sports) {
+      console.log(key);
+      console.log(sports[key]);
+    }
+
+  </script>
+</body>
+</html>
